@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "1b52eecd-a15a-4c9a-9b16-2cc356dce47d",
+		"name": "pruebaexamen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23783500"
+	},
+	"item": [
+		{
+			"name": "getAllCustom",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_base}}product/?s=price>24&s=available:false&s=releaseDate>2021-06-11&page=1&size=5&sort=price,desc",
+					"host": [
+						"{{url_base}}product"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "price>24"
+						},
+						{
+							"key": "s",
+							"value": "available:false"
+						},
+						{
+							"key": "s",
+							"value": "releaseDate>2021-06-11"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						},
+						{
+							"key": "sort",
+							"value": "price,desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_base}}product/?s",
+					"host": [
+						"{{url_base}}product"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url_base",
+			"value": "localhost:8080/",
+			"type": "string"
+		}
+	]
+}
